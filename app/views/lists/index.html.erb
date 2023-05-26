@@ -1,0 +1,10 @@
+<h1>Welcome to the lists</h1>
+<br>
+<%= link_to "Add new List", new_list_path%>
+<br>
+<br>
+<ul>
+<% @lists.each do |list| %>
+<li><%= link_to list.name, list_path(list) %></li>
+<% end %>
+</ul>
